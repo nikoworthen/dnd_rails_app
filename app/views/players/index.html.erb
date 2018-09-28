@@ -1,0 +1,13 @@
+<h1>All Player Characters</h1>
+
+<ul id="players">
+  <% @players.each do |player| %>
+    <li>
+      <%= link_to player.pname, player_path(player),
+    class: 'player_pname', id: "player_#{player.id}" %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Character", new_player_path, class: "new_player"%>
+
