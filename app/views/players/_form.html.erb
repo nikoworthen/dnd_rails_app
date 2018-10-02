@@ -1,0 +1,18 @@
+<%= form_for(@player) do |f| %>
+  <ul>
+  <% @player.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :pname %>
+  </p>
+  <p>
+    <%= f.label :class %><br />
+    <%= f.text_area :pclass %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

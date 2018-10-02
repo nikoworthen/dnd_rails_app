@@ -1,3 +1,5 @@
 <h1><%= @player.pname %></h1>
 <p><%= "Class: " + @player.pclass %></p>
 <%= link_to "<< Back to Characters List", players_path %>
+<%= link_to "delete", player_path(@player), method: :delete, data: {confirm: "Really delete the character?"} %>
+<%= link_to "edit", edit_player_path(@player) %>
