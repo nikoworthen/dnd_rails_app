@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alignment: MyString
+  motivation: MyText
+  player: one
+
+two:
+  alignment: MyString
+  motivation: MyText
+  player: two

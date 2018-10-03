@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_28_144043) do
+ActiveRecord::Schema.define(version: 2018_10_02_210705) do
+
+  create_table "backgrounds", force: :cascade do |t|
+    t.string "alignment"
+    t.text "motivation"
+    t.integer "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_backgrounds_on_player_id"
+  end
+
+  create_table "character_logs", force: :cascade do |t|
+    t.string "dungeon_master"
+    t.text "events"
+    t.integer "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_character_logs_on_player_id"
+  end
 
   create_table "player_characters", force: :cascade do |t|
     t.string "name"

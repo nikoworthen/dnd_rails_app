@@ -6,6 +6,8 @@ class PlayersController < ApplicationController
 
 	def show
 		@player = Player.find(params[:id])
+		@characterlog = CharacterLog.new
+		@characterlog.player_id = @player.id
 	end
 
 	def new

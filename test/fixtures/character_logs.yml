@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dungeon_master: MyString
+  events: MyText
+  player: one
+
+two:
+  dungeon_master: MyString
+  events: MyText
+  player: two

@@ -1,0 +1,16 @@
+<h3> Log an Event</h3>
+<p>(Form will go here)<p>
+
+<%= form_for [@player, @characterlog] do |f| %>
+  <p>
+    <%= f.label :dungeon_master %><br/>
+    <%= f.text_field :dungeon_master %>
+  </p>
+  <p>
+    <%= f.label :event %><br/>
+    <%= f.text_area :events %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

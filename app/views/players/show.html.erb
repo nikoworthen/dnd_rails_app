@@ -1,5 +1,8 @@
 <h1><%= @player.pname %></h1>
 <p><%= "Class: " + @player.pclass %></p>
+<%= render partial: 'character_log/form' %>
 <%= link_to "<< Back to Characters List", players_path %>
 <%= link_to "delete", player_path(@player), method: :delete, data: {confirm: "Really delete the character?"} %>
 <%= link_to "edit", edit_player_path(@player) %>
+<h3> Character Log (<%= @player.character_logs.size %> Events)</h3>
+<%= render partial: 'players/character_log', collection: @player.character_logs %>
